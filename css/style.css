@@ -79,10 +79,6 @@
   text-decoration: underline;
 }
 
-.menu-burger_header {
-  display: none;
-}
-
 .welcome-title {
   font-size: 45px;
   line-height: 1.6;
@@ -1009,4 +1005,11 @@
     text-align: center;
   }
 
+}
+
+@media (min-width: 1200px) {
+
+  .menu-burger_header {
+    display: none;
+  }
 }
