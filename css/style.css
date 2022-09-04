@@ -6,8 +6,6 @@
   border: none;
 }
 
-@media (min-width: 1200px) {
-
 @font-face {
   font-family: Open Sans;
   src: url(../fonts/OpenSans-Regular.woff),
@@ -81,6 +79,10 @@
   text-decoration: underline;
 }
 
+.menu-burger_header {
+  display: none;
+}
+
 .welcome-title {
   font-size: 45px;
   line-height: 1.6;
@@ -89,12 +91,15 @@
   font-family: Open Sans, sans-serif;
   text-align: center;
   text-transform: uppercase;
-  text-align: center;
   margin: auto;
   padding: 128px 0;
 }
 
 /* тренды */
+.news_name_h3.trend1 {
+  margin-top: 60px;
+}
+
 .trends {
   width: 100%;
   margin-top: 30px;
@@ -241,6 +246,7 @@
 
 .img-1 {
   background-color: #eff6f1;
+  width: 382px;
 }
 
 .menu-2 {
@@ -305,36 +311,6 @@
   color: #0f0d0e;
   font-weight: 400;
   font-family: Open Sans, sans-serif;
-}
-
-/* ASIDE */
-
-.aside-right {
-  display: flex;
-  flex-direction: column;
-  margin-left: 119px;
-}
-
-.news_name_h3 {
-  font-size: 14px;
-  color: #0f0d0e;
-  font-weight: 700;
-  font-family: Open Sans, sans-serif;
-  text-transform: uppercase;
-  margin: 0px 0 28px;
-  padding-bottom: 15px;
-  text-align: center;
-}
-
-.news_name_h3 span {
-  display: inline-block;
-}
-
-.news_name_h3 span::after {
-  content: "";
-  display: inline-block;
-  width: 63%;
-  border-bottom: solid 3px #e1d9bd;
 }
 
 /* ASIDE */
@@ -640,10 +616,10 @@
   height: 260px;
   outline: 3px solid #b59f5b;
   flex-grow: 1;
-  padding: auto;
+  padding: 25px 22px 30px 25px;
   margin-left: -25px;
   margin-top: -20px;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .product__title {
@@ -652,9 +628,10 @@
   font-weight: 700;
   font-family: Open Sans, sans-serif;
   text-transform: uppercase;
-  padding-top: 30px;
-  padding-right: 90px;
-  text-align: center;
+  /*padding-right: 90px;*/
+  text-align: left;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
 
 .product__description {
@@ -665,7 +642,8 @@
 }
 
 .product__description p {
-  text-align: center;
+  text-align: left;
+  padding-bottom: 25px;
 }
 
 .product__description p:hover {
@@ -691,13 +669,18 @@
   align-items: center;
 }
 
+.product__prices {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .product__price {
   font-size: 24px;
   font-weight: 700;
   color: #222;
-  line-height: 1;
-  display: flex;
-  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .product_price_old {
@@ -719,11 +702,7 @@
   border-top: 1px solid #e1d9bd;
   text-transform: uppercase;
   font-size: 14px;
-  margin-top: 20px;
   color: #fff;
-  margin-bottom: 60px;
-  margin-left: 180px;
-
 }
 
 .button_store:hover {
@@ -805,4 +784,229 @@
   text-decoration: none;
   display: block;
 }
+
+@media(max-width: 768px) {
+
+  .header {
+    background-image: url(../images/banner-bg-tablet.jpg);
+    width: 100%;
+  }
+
+  .welcome-title {
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .trend {
+    width: 49%;
+    margin-top: 3px;
+  }
+
+  .trend-link {
+    font-size: 17px;
+  }
+
+  .news_name {
+    font-size: 17px;
+  }
+
+  .menu-2 {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .container_second {
+    width: 100%;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .section {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .section .img-1 {
+    width: 100%;
+  }
+
+  .menu-burger_header:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .burger-menu_lines::before,
+  .burger-menu_lines::after,
+  .burger-menu_lines {
+    position: absolute;
+    width: 23px;
+    height: 3px;
+    background-color: #ffffff;
+  }
+
+  .burger-menu_lines {
+    top: 0;
+    right: 0;
+    margin-right: 35px;
+    margin-top: 50px;
+  }
+
+  .burger-menu_lines::before {
+    content: "";
+    top: -12px;
+  }
+
+  .burger-menu_lines::after {
+    content: "";
+    top: 12px;
+  }
+
+  .nav {
+    padding-top: 120px;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    overflow-y: auto;
+    right: -100%;
+  }
+
+  .nav-link {
+    padding: 18px 35px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    color: #bb1e99;
+    border-bottom: 1px solid #fff;
+    display: none;
+  }
+
+  .menu-link:first-child {
+    border-top: 1px solid #fff;
+  }
+
+  .aside-right {
+    margin-left: 35px;
+  }
+
+  .aside-right .section {
+    flex-wrap: nowrap;
+  }
+
+  .aside-right .section .menu-2 {
+    padding-left: 20px;
+  }
+
+  .products {
+    flex-wrap: wrap;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  .products .product {
+    width: 47%;
+    margin-right: 30px;
+  }
+
+  .products .product:nth-child(2n+2) {
+    margin-right: 0;
+  }
+
+  .products .product picture {
+    text-align: center;
+  }
+
+  .products .product .product__body {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .footer-wrap {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+}
+
+@media(max-width: 360px) {
+
+  .header {
+    background-image: url(../images/banner-mobile.jpg);
+    width: 100%;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .trend {
+    width: 100%;
+    margin-bottom: 3px;
+  }
+
+  .container_second {
+    display: block;
+    width: 100%;
+  }
+
+  .section {
+    display: block;
+    width: 100%;
+  }
+
+  .products {
+    display: block;
+    width: 100%;
+    padding-right: 0px;
+  }
+
+  .search-button-2 {
+    width: 100%;
+  }
+
+  .img-1 {
+    width: 100%;
+  }
+
+  .aside-right {
+    margin-left: 0;
+  }
+
+  .menu-2 {
+    margin-left: 0;
+  }
+
+  .product__body {
+    width: 100%;
+    margin-left: -10px;
+  }
+
+  .news_name_h3.trend1 {
+    margin-top: 45px;
+  }
+
+  .menu,
+  .logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .welcome-title {
+    width: 328px;
+    font-size: 26px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: Open Sans, sans-serif;
+    text-align: center;
+  }
+
 }
