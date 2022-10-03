@@ -797,14 +797,15 @@
   text-decoration: none;
   display: block;
 }
-
-.popup-bg {
+ /*popup*/
+ .popup-bg {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
+  /*display: none; */
 }
 
 .popup {
@@ -827,12 +828,10 @@
   right: 0;
 }
 
-.popup .popup_close {
+.popup .popup_close img {
   width: 30px;
   height: 30px;
-  background-image: url(../svg/form-x.svg)
 }
-
 
 .popup .popup_content .search {
   display: flex;
@@ -843,7 +842,7 @@
   padding-bottom: 0;
 }
 
-.popup_content .action {
+.popup_content .search {
   margin: 0;
 }
 
@@ -869,6 +868,40 @@
 
 .popup_content .form_items .search-field {
   width: 100%;
+}
+
+.form_items .selection {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 18px;
+  height: 47px;
+  font-size: 13px;
+  border-bottom: 1px solid transparent;
+  background-color: #f4f7f6;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: right 18px center;
+  background-image: url(../svg/form-arrows.svg);
+}
+
+.form_items .selection::-ms-expand {
+  display: none;
+} 
+
+.form_items .selection:focus {
+  border-bottom: 1px solid #b59f5b;
+}
+
+.form_items select.selection option {
+  background: transparent;
+  color: #878787;
+}
+
+.form_items .selection option:hover {
+  background: none;
+  color: #000000;
 }
 
 .popup_content .form_items .search-button {
@@ -901,18 +934,18 @@
 }
 
 .form_radio .radio {
-  display: none;
+	display: none;
 }
 
 .form_radio label {
   line-height: 24px;
-  font-size: 13px;
+	font-size: 13px;
   color: #000000;
   font-weight: 400;
   font-family: "Open Sans";
   cursor: pointer;
-  position: relative;
-  padding-left: 30px;
+	position: relative;
+	padding-left: 30px;
   user-select: none;
 }
 
@@ -938,12 +971,14 @@
   width: 25px;
   top: 30px;
   left: 20px;
-  z-index: 5;
+	z-index: 5;
 }
 
-.form_radio input[type=radio]:checked+label:before {
-  background-image: url(../svg/form-circle.svg);
+.form_radio input[type=radio]:checked + label:before {
+	background-image: url(../svg/form-circle.svg);
 }
+
+/*end popup*/
 
 @media(min-width: 641px) and (max-width: 1200px) {
 

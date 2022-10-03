@@ -576,9 +576,9 @@
 
   <!-- popup -->
 
-  <div class="popup-bg hidden">
+  <div class="popup-bg">
     <div class="popup">     
-      <div class="popup_close"><div> 
+      <div class="popup_close"><img src="./svg/form-x.svg" /></div> 
       <div class="popup_content">        
         <h3 class="news_name_h3"><span>Ваш фидбек</span></h3>
         <form class="action">
@@ -586,11 +586,15 @@
             <span>Как часто вы заходите на сайт?</span>
             <label class="search-group">
               <span class="hidden">Поле ввода</span>
-              <select class="search-field" placeholder="Почти каждый день" alt="поле поиска">
+              <select class="selection" alt="поле поиска">
+                <option value="1" selected>Почти каждый день</option>
+                <option value="2">Раз в несколько дней</option>
+                <option value="3">Раз в несколько недель</option>
+                <option value="5">Несколько раз в год</option>
+              </select>
               <span class="hidden">Кнопка поиска</span>
-              <button class="search-button" alt="кнопка поиска"></button>
             </label>
-            
+
           </div>
           <div class="form_items">
             <span>Вы подписаны на email рассылку?</span>
